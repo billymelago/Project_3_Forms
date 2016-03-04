@@ -121,6 +121,7 @@ form {
 
 fieldset {
     border: none;
+    padding: 0;
 }
 
 legend {
@@ -413,6 +414,17 @@ input[type=radio]:checked + label:before {
 
 @media screen and (min-width: 760px) {
     
+   form {
+        padding: 20px 0;
+}
+
+    fieldset {
+        border: none;
+        padding: 0;
+}     
+
+    
+    
     #container {
         max-width: 760px;
         margin: 0 auto;
@@ -483,7 +495,7 @@ label {
 
 
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 2920px) {
     
     
     
