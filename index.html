@@ -2,25 +2,6 @@
 <html>
     <head>
         
-        <script src="js/jquery.js"></script>
-
-        <script src="js-webshim/minified/polyfiller.js"></script> 
-
-        <script> 
-            $.webshims.polyfill();
-        </script>
-        
-         <script> 
-	$(function(){
-		$('input:invalid').each(function(){
-		    $(this).after( $.prop(this, 'validationMessage') );
-		});
-		
-	});
-</script>
-        
-        
-        
         <meta charset="UTF-8">
         <title>P3 Registration Form</title>
         <!--[if lt IE 9]>
@@ -34,7 +15,15 @@
           type="image/ico" 
           href="Images/favicon.ico">
         
+        <script src="js/jquery.js"></script>
+
+        <script src="js-webshim/minified/polyfiller.js"></script> 
+
+        <script> 
+            $.webshims.polyfill();
+        </script>
         
+     
         
         
     </head>
@@ -222,7 +211,14 @@
     
     </footer>
     
-   
+     <script> 
+	$(function(){
+		$('input:invalid').each(function(){
+		    $(this).after( $.prop(this, 'validationMessage') );
+		});
+		
+	});
+</script>  
     
 </body>
     
