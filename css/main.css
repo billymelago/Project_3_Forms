@@ -157,7 +157,7 @@ select {
     margin: 0;
     
 	box-shadow: none;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 
@@ -166,19 +166,16 @@ select {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 	box-shadow: none;
-    padding: 1px;
+    padding: 10px;
     height: 55px;
 }
 
 
 
 input[type="text"],
-input[type="name"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
-input[type="street-address"],
-input[type="postal-code"],
 input[type="date"],
 input[type="number"],
 select,
@@ -208,12 +205,9 @@ input[type="checkbox"] {
 
 
 input[type="text"]:focus,
-input[type="name"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,
-input[type="street-address"]:focus,
-input[type="postal-code"]:focus,
 input[type="date"]:focus,
 input[type="number"]:focus,
 textarea:focus,
@@ -232,6 +226,9 @@ select:focus {
     border-radius:15px;
 }
 
+select:focus {
+    padding: 10px;;
+}
 
 
 
@@ -255,7 +252,7 @@ input:-ms-input-placeholder {
     font-family: 'Oswald', sans-serif;
 }
 
-input::placeholder {
+input:placeholder {
     color: #ccc;
     text-align: right;
     font-family: 'Oswald', sans-serif;
@@ -428,7 +425,6 @@ input[type=radio]:checked + label:before {
     
     
 input[type="text"],
-input[type="name"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
@@ -443,7 +439,6 @@ select {
 
     
 input[type="text"]:focus,
-input[type="name"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="tel"]:focus,

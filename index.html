@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
+        
+        <script src="js/jquery.js"></script>
+
+        <script src="js-webshim/minified/polyfiller.js"></script> 
+
+        <script> 
+            $.webshims.polyfill();
+        </script>
+        
+         <script> 
+	$(function(){
+		$('input:invalid').each(function(){
+		    $(this).after( $.prop(this, 'validationMessage') );
+		});
+		
+	});
+</script>
+        
+        
+        
         <meta charset="UTF-8">
         <title>P3 Registration Form</title>
         <!--[if lt IE 9]>
@@ -13,7 +33,10 @@
         <link rel="icon" 
           type="image/ico" 
           href="Images/favicon.ico">
-
+        
+        
+        
+        
     </head>
 
 <body id="bodyContainer">
@@ -39,19 +62,19 @@
             <legend>Contact Information</legend>    
 
                 <label for="fullName">Full Name:</label>
-                <input type="name" id="fullName" name="user_name" title="Enter Your First and Last Name" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" placeholder="first last required &#10059;" required aria-required=”true”/>
+                <input type="text" id="fullName" name="user_name" title="Enter Your First and Last Name" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" placeholder="first last required &#10059;" required aria-required="true"/>
                 <span class="help">(Format: FirstName LastName)</span><br>
                                 
                 
                 <label for="email">Email Address:</label>
                 
-                <input type="email" id="email" name="user_email" title="Enter Your Email Address" required aria-required=”true”  placeholder="you@email.com required &#10059;"/>
+                <input type="email" id="email" name="user_email" title="Enter Your Email Address" required aria-required="true" placeholder="you@email.com required &#10059;"/>
                 <span class="help">(This will be your UserName)</span><br>
                 
                 
                 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="user_password" title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" required aria-required=”true” pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password required &#10059;">
+                <input type="password" id="password" name="user_password" title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" required aria-required="true" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password required &#10059;">
                 <span class="help">(Min 8, Upp, low, Num, Spec Char)</span><br>
                 
 
@@ -61,7 +84,7 @@
                 
 
                 <label for="address">Street Address:</label>
-                <input type="street-address" id="address" name="user_address" title="Enter Your Street Address" placeholder="1234 Your St.">
+                <input type="text" id="address" name="user_address" title="Enter Your Street Address" placeholder="1234 Your St.">
                 <span class="help">(Optional)</span><br>
                 
 
@@ -129,7 +152,7 @@
                 
 
                 <label for="zip">Zip Code:</label>
-                <input type="postal-code" id="zip" name="user_zip" title="Enter Your 5 Digit Zipcode" pattern="(\d{5}([\-]\d{4})?)" placeholder="5 digits">
+                <input type="text" id="zip" name="user_zip" title="Enter Your 5 Digit Zipcode" pattern="(\d{5}([\-]\d{4})?)" max="5" placeholder="5 digits">
                 <span class="help">(Only 5 digits)</span><br>
                 
                 
@@ -165,12 +188,12 @@
                 
                 
                 <label for="numNews" class="">Newsletters each month</label>
-                <input type="number" id="numNews" value="number-newsletters" name="user_num_newsletters" min="1" max="10" placeholder="1-10" title="How Many Newsletters Would You Like each Month"/>
+                <input type="number" id="numNews" value="" name="user_num_newsletters" min="1" max="10" placeholder="1-10" title="How Many Newsletters Would You Like each Month"/>
                 <span class="help">(We don't want to be annoying)</span><br>
                 
                 
                 <label for="birthday" class="">When is your birthday</label>
-                <input type="date" id="birthday" value="birthday" name="user_birthday" title="Enter You Birthday MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\"/>
+                <input type="date" id="birthday" value="" name="user_birthday" title="Enter Your Birthday MM/DD/YYYY"/>
                 <span class="help">(We'll send you a card)</span>
                 
                 
@@ -199,6 +222,10 @@
     
     </footer>
     
+   
+    
 </body>
+    
+    
 
 </html>
