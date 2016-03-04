@@ -1,0 +1,584 @@
+/************************* GLOBAL STYLES *************************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1,
+h2,
+h3,
+legend {
+    font-family: 'Oswald', sans-serif;
+}
+
+h3 {
+    display: block;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+
+header {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.mainTitle {
+    display: inline-block;
+    width: 100%;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    background-color: darkslategray;
+    text-shadow: 1px 1px 1px slategrey;
+    box-shadow: 0px 0px 10px 0px slategrey;
+}
+
+.secondaryTitle p {
+    padding: 0px 12px 50px;
+    font-size: 1.2em;
+    border-bottom: solid 4px darkslategrey;
+    margin-bottom: 5px;
+}
+
+.secondaryTitle {
+    display: inline-block;
+    margin: 0 20px;
+    color: darkslategray;
+    border-bottom: solid 2px darkslategrey;
+}
+
+#container {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+
+
+footer {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 350px;
+}
+
+
+
+
+
+
+/*********** LINKS ***********/
+
+a:link {
+    color: #0099cc;
+}
+
+a:visited {
+    color: grey;
+}
+
+a:focus {
+    background-color: black;
+    color: white;
+}
+
+a:hover {
+    border-bottom: 10px solid #0099cc;
+}
+
+a:active {
+    background-color: #0099cc;
+    color: white;
+}
+
+
+/************************* FORM STYLES *************************/
+
+.help {
+    display: inline-block;
+    opacity: 0;
+    font-size: .72em;
+    -webkit-transition: opacity .4s ease-in-out;
+    transition: opacity .4s ease-in-out;
+    color: darkgrey;
+}
+
+input:hover + .help,
+select:hover + .help,
+textarea:hover + .help {
+    display: inline-block;
+    opacity: .65;
+}
+
+
+form {
+    padding: 20px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-weight: 700;
+    font-size: 1.56em;
+    width: auto;
+    letter-spacing: -1px;
+    color: darkslategray;
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    color: #888;
+    font-size: 1em;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+}
+
+label h3 {
+    margin-bottom: 0;
+}
+
+
+
+
+input,
+select {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    padding: 9px;
+    margin: 0;
+    
+	box-shadow: none;
+    border-radius: 2px;
+}
+
+
+select {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+	box-shadow: none;
+    padding: 1px;
+    height: 55px;
+}
+
+
+
+input[type="text"],
+input[type="name"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="street-address"],
+input[type="postal-code"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    color: rgb(155, 145, 155);
+    border: none;
+    border-bottom: solid thin #ccc;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .15);
+    
+    -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition:         all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input[type="number"],
+input[type="date"] {
+    width: 60%;
+    border: none;
+    border-bottom: solid thin #ccc;
+    outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: none;
+}
+
+
+input[type="text"]:focus,
+input[type="name"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="street-address"]:focus,
+input[type="postal-code"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    background-color: darkslategray;
+    background-image: -webkit-linear-gradient( bottom, darkslategrey, slategrey);
+    background-image: linear-gradient( to top, darkslategrey, slategrey);
+    outline: none;
+    padding: 20px;
+    width: 90%;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .85em;
+    font-weight: 300;
+    border-radius:15px;
+}
+
+
+
+
+input::-webkit-input-placeholder {
+    display: inline-block;
+    color: #ccc;
+    padding: 0 10px;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+}
+
+input::-moz-placeholder {
+    color: #ccc;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+}
+
+input:-ms-input-placeholder {
+    color: #ccc;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+}
+
+input::placeholder {
+    color: #ccc;
+    text-align: right;
+    font-family: 'Oswald', sans-serif;
+}
+
+input:required:valid {
+   border-color: lime;
+   background-color: lightgreen;
+}
+
+
+
+input:invalid,
+input:out-of-range {
+    border-bottom: dotted thin crimson;
+    background-color: rgba(195, 49, 79, .05);
+}
+
+input:invalid:focus,
+input:out-of-range:focus,
+input:required:focus {
+    background-image: none;
+    background-color: crimson;
+}
+
+input:valid:focus,
+input:in-range:focus {
+    background-color: lime;
+    color: black;
+}
+
+
+input:optional:focus {
+    background-color: darkslategray;
+    color: white;
+}
+
+
+input[type=checkbox]:checked + label:before {
+    content:'\2718';
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    text-shadow: none;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: white;
+    font-size: 1.19em;
+    text-align: center;
+    line-height: 20px;
+    text-shadow: none;
+}
+
+
+
+.newsLetterType {
+    margin-bottom: 30px;
+}
+
+
+
+.news,
+.format {
+    padding: 4px;
+    text-shadow: 2px 2px 1px rgba(65, 85, 155, .20);
+    -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.news:hover,
+.format:hover {
+    text-decoration: underline;
+}
+
+
+.news:active,
+.format:active {
+    letter-spacing: 1px;
+    text-shadow: none;
+}
+
+.news:before,
+.format:before {
+    content: "";
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    
+    border-radius: 4px;
+    margin: 0 10px 0 0;
+    vertical-align: middle;
+    position: relative;
+   
+    background-color: darkslategrey;
+    background-image: -webkit-linear-gradient( bottom, darkslategrey, slategrey);
+    background-image: linear-gradient( to top, darkslategrey, slategrey);
+}
+
+.format:before {
+    border-radius: 100%;
+}
+ 
+
+
+
+
+.contactInfo,
+.newsletter {
+    border-bottom: solid 4px darkslategrey;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+}
+
+
+.btn {
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 20px;
+    margin: 20px auto 0;
+    background-color: darkslategrey;
+    background-image: -webkit-linear-gradient( bottom, darkslategrey, rgba(144, 177, 245, .3));
+    background-image: linear-gradient( to top, darkslategrey, rgba(144, 177, 245, .3));
+    box-shadow: 0px 5px 2px 0px darkgrey;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+}
+
+.btn:hover {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn:active {
+    box-shadow: 0px 1px 0px 0px darkgrey;
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    color: lightslategrey;
+}
+
+
+
+
+
+
+
+/*********** MEDIA QUERIES ***********/
+
+
+@media screen and (min-width: 760px) {
+    
+    #container {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .secondaryTitle {
+        width: 760px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+input[type="text"],
+input[type="name"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="street-address"],
+input[type="postal-code"],
+input[type="date"],
+input[type="number"],
+select {
+        width: 70%;
+        margin:  10px 0px 0px;
+    }
+
+    
+input[type="text"]:focus,
+input[type="name"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="street-address"]:focus,
+input[type="postal-code"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+        width: 70%;
+        padding: 10px;
+        
+    }    
+    
+label {
+        float: left;
+        width: 30%;
+        padding: 10px 0;
+    }   
+    
+    .letter,
+    .news,
+    .format {
+        display: block;
+        width: 100%;
+    }
+    
+    .help {
+        margin-left: 30%; 
+    }
+    
+  
+    .plain {
+        margin-bottom: 40px;
+    }
+   
+    
+    
+} 
+
+/*********** END @media screen and (min-width: 760px) **********/
+
+
+
+@media screen and (min-width: 1920px) {
+    
+    
+    
+    #container {
+        max-width: 100%;
+        background-color: white;
+        font-size: 2.6em;
+    }
+    
+    .mainTitle,
+    .secondaryTitle {
+        width: 100%;
+        font-size: 2.6em;
+    }    
+    
+    .contactInfo {
+        
+        float: left;
+        width: 40%;
+        margin: 0 80px 0 0;
+    }
+    
+    label {
+        display: block;
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    
+   input[type="text"],
+input[type="name"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="street-address"],
+input[type="postal-code"],
+input[type="date"],
+input[type="number"],
+select {
+        display: block;
+        width: 100%;
+        margin: 5px 0px 0px;
+    }
+    
+    .contactInfo {
+        margin-bottom: 20px;
+    }
+    
+    .contactInfo,
+    .newsletter {
+        border-bottom: none;
+    }
+    
+
+    select {
+        height: auto;
+    }
+    
+    .news:before,
+    .format:before {
+        height: 40px;
+        width: 40px;
+    }
+    
+    input[type=radio]:checked + label:before,
+    input[type=checkbox]:checked + label:before {
+        line-height: 40px;
+    }
+    
+    .help {
+        margin-left: 1%;
+    }
+    
+        .buttons {
+        border-top: solid 6px darkslategrey;
+        clear: both;
+        padding: 40px;
+    }
+    
+    .btn {
+        width: 85%;
+        margin-bottom: 30px;
+    }
+    
+    footer {
+        font-size: 2em;
+    }
+    
+}
+
+
+
+

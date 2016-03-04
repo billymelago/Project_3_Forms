@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>P3 Registration Form</title>
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,600,300,300italic|Oswald:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" 
+          type="image/ico" 
+          href="Images/favicon.ico">
+
+    </head>
+
+<body id="bodyContainer">
+    
+    <header>
+    
+        <div class="mainTitle"><h1>The Code Review</h1></div>
+        
+        <div class="secondaryTitle">
+            <h2>Signup for our newsletter</h2>
+            <p>Get the latest news on how your code is doing right in your inbox</p>
+        </div> <!-- END .secondaryTitle -->
+    </header>
+    
+    <div id="container">
+    
+        <form action="index.html" method="post" autocomplete="on">
+
+
+
+            <fieldset class="contactInfo"> <!-- .CONTACTINFO -->
+
+            <legend>Contact Information</legend>    
+
+                <label for="fullName">Full Name:</label>
+                <input type="name" id="fullName" name="user_name" title="Enter Your First and Last Name" pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" placeholder="first last required &#10059;" required aria-required=”true”/>
+                <span class="help">(Format: FirstName LastName)</span><br>
+                                
+                
+                <label for="email">Email Address:</label>
+                
+                <input type="email" id="email" name="user_email" title="Enter Your Email Address" required aria-required=”true”  placeholder="you@email.com required &#10059;"/>
+                <span class="help">(This will be your UserName)</span><br>
+                
+                
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="user_password" title="Password (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars)" required aria-required=”true” pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="password required &#10059;">
+                <span class="help">(Min 8, Upp, low, Num, Spec Char)</span><br>
+                
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="user_phone" title="Enter Your Phone Number 123-456-7890" maxlength="12" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890">
+                <span class="help">(Format: 123-456-7890)</span><br>
+                
+
+                <label for="address">Street Address:</label>
+                <input type="street-address" id="address" name="user_address" title="Enter Your Street Address" placeholder="1234 Your St.">
+                <span class="help">(Optional)</span><br>
+                
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="user_city" title="Enter Your City" placeholder="city">
+                <span class="help">(Optional)</span><br>
+                
+
+                <label for="state">State:</label>
+                <select id="state" name="user-state" title="Select Your State">
+                  <option value=" " disabled selected hidden="">Choose State</option>      
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="DC">Dist of Columbia</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+                <span class="help">(Select your State)</span><br>
+                
+
+                <label for="zip">Zip Code:</label>
+                <input type="postal-code" id="zip" name="user_zip" title="Enter Your 5 Digit Zipcode" pattern="(\d{5}([\-]\d{4})?)" placeholder="5 digits">
+                <span class="help">(Only 5 digits)</span><br>
+                
+                
+                
+
+            </fieldset> <!-- END .CONTACTINFO --> 
+
+
+
+
+            <fieldset class="newsletter"> <!-- NEWSLETTER -->
+
+            <legend>Newsletter</legend>
+                <div class="newsLetterType">
+                    <label class="letter">Select the Newsletters you would like to recieve</label>
+                    <input type="checkbox" id="htmlType" value="newsletter_html" name="user_newsletter">
+                    <label for="htmlType" class="news">HTML News </label>
+                    <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter">
+                    <label for="css" class="news">CSS News</label>
+                    <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter">
+                    <label for="javascript" class="news">JAVASCRIPT News</label>
+                </div> <!-- END .newsLetterType -->
+                
+                <div class="newsLetterType">   
+                    <label class="letter">Newsletter Format</label>
+                    <input type="radio" id="html" value="html" name="user_format">
+                    
+                    <label for="html" class="format">HTML &#10084;</label>
+                    <input type="radio" id="plainText" value="plainText" name="user_format">
+                    <label for="plainText" class="format plain">Plain Text &#9999;</label>    
+                </div><!-- END .newsLetterType -->
+                
+                
+                
+                <label for="numNews" class="">Newsletters each month</label>
+                <input type="number" id="numNews" value="number-newsletters" name="user_num_newsletters" min="1" max="10" placeholder="1-10" title="How Many Newsletters Would You Like each Month"/>
+                <span class="help">(We don't want to be annoying)</span><br>
+                
+                
+                <label for="birthday" class="">When is your birthday</label>
+                <input type="date" id="birthday" value="birthday" name="user_birthday" title="Enter You Birthday MM/DD/YYYY" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\"/>
+                <span class="help">(We'll send you a card)</span>
+                
+                
+
+                <label for="topics" class="letter">Other topics you would like to hear about</label>
+                <textarea id="topics" name="user_topics" cols="6" rows="5"></textarea>
+                <span class="help">(We are open minded)</span>
+                    
+                
+
+            </fieldset> <!-- END .NEWSLETTER -->
+            
+            <div class="buttons">
+                <button class="submit btn" type="submit">Sign Up</button>
+                <button class="reset btn" type="reset">Clear Form</button>
+            </div><!-- END .buttons -->    
+
+        </form>
+        
+    </div> <!-- END #CONTAINER -->    
+    
+    
+    <footer>
+    
+        <p><small>&copy; The Code Review</small></p>
+    
+    </footer>
+    
+</body>
+
+</html>
