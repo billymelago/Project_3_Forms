@@ -15,17 +15,6 @@
           type="image/ico" 
           href="img/faviconCR.png">
         
-        <script src="js/jquery.js"></script>
-
-        <script src="js-webshim/minified/polyfiller.js"></script> 
-
-        <script> 
-            $.webshims.polyfill();
-        </script>
-        
-     
-        
-        
     </head>
 
 <body id="bodyContainer">
@@ -137,13 +126,12 @@
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
                 </select>
-                <span class="help">(Select your State)</span><br>
+                <span class="help">(Select your State)</span><br
                 
-
                 <label for="zip">Zip Code:</label>
                 <input type="text" id="zip" name="user_zip" title="Enter Your 5 Digit Zipcode" pattern="(\d{5}([\-]\d{4})?)" max="5" placeholder="5 digits">
                 <span class="help">(Only 5 digits)</span><br>
-                
+                 
                 
                 
 
@@ -195,12 +183,13 @@
 
             </fieldset> <!-- END .NEWSLETTER -->
             
+            
             <div class="buttons">
                 <button class="submit btn" type="submit">Sign Up</button>
                 <button class="reset btn" type="reset">Clear Form</button>
             </div><!-- END .buttons -->    
 
-        </form>
+        </form>   
         
     </div> <!-- END #CONTAINER -->    
     
@@ -210,15 +199,7 @@
         <p><small>&copy; The Code Review</small></p>
     
     </footer>
-    
-     <script> 
-	$(function(){
-		$('input:invalid').each(function(){
-		    $(this).after( $.prop(this, 'validationMessage') );
-		});
-		
-	});
-</script>  
+   
     
 </body>
     

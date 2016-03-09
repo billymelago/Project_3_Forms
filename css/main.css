@@ -31,6 +31,7 @@ header {
 .mainTitle {
     display: inline-block;
     width: 100%;
+    font-size: 1em;
     font-weight: 700;
     color: white;
     text-transform: uppercase;
@@ -102,8 +103,8 @@ a:active {
     display: inline-block;
     opacity: 0;
     font-size: .72em;
-    -webkit-transition: opacity .4s ease-in-out;
-    transition: opacity .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     color: darkgrey;
 }
 
@@ -111,7 +112,7 @@ input:hover + .help,
 select:hover + .help,
 textarea:hover + .help {
     display: inline-block;
-    opacity: .65;
+    opacity: .85;
 }
 
 
@@ -168,7 +169,6 @@ select {
     font-weight: 400;
 	box-shadow: none;
     padding: 10px;
-    height: 55px;
 }
 
 input:not([type='submit']) {
@@ -417,6 +417,10 @@ input[type=radio]:checked + label:before {
 
 
 @media screen and (min-width: 760px) {
+
+    .mainTitle {
+        font-size: 1.2em;
+    }
     
    form {
         padding: 20px 0;
@@ -449,6 +453,7 @@ input[type="postal-code"],
 input[type="date"],
 input[type="number"],
 select {
+        display: inline-block;
         width: 70%;
         margin:  10px 0px 0px;
     }
@@ -466,8 +471,7 @@ textarea:focus,
 select:focus {
         width: 70%;
         padding: 10px;
-        
-    }    
+    }
     
 label {
         float: left;
@@ -486,6 +490,14 @@ label {
         margin-left: 30%; 
     }
     
+    
+    input:focus+ .help,
+    select:focus + .help,
+    textarea:focus + .help {
+        opacity: 0;
+    }
+    
+    
   
     .plain {
         margin-bottom: 40px;
@@ -499,24 +511,28 @@ label {
 
 
 
-@media screen and (min-width: 2920px) {
+@media screen and (min-width: 1924px) {
     
     
     
     #container {
         max-width: 100%;
         background-color: white;
-        font-size: 2.6em;
+        font-size: 1.6em;
+        padding: 25px;
     }
     
     .mainTitle,
     .secondaryTitle {
         width: 100%;
-        font-size: 2.6em;
+        font-size: 1.6em;
     }    
     
+    .secondaryTitle p {
+        font-size: .92em;
+    }
+    
     .contactInfo {
-        
         float: left;
         width: 40%;
         margin: 0 80px 0 0;
@@ -539,7 +555,7 @@ input[type="postal-code"],
 input[type="date"],
 input[type="number"],
 select {
-        display: block;
+        display: inline-block;
         width: 100%;
         margin: 5px 0px 0px;
     }
@@ -555,7 +571,7 @@ select {
     
 
     select {
-        height: auto;
+        height: ;
     }
     
     .news:before,
