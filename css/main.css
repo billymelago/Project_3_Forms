@@ -569,11 +569,6 @@ select {
         border-bottom: none;
     }
     
-
-    select {
-        height: ;
-    }
-    
     .news:before,
     .format:before {
         height: 40px;
